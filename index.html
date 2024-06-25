@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-10 bg-[white]">
+        <nav class="flex justify-between px-[40px] py-[20px]">
+            <div class="header-left">
+                <img src="./images/header-logo.svg" alt="header-logo">
+            </div>
+            <div class="header-right flex items-center gap-[20px]">
+                <ul class="flex gap-[20px]">
+                    <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af]"><a href="#">Flights</a></li>
+                    <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]"><a href="#">Hotels</a></li>
+                    <li class="text-[18px] hover:text-[#753585]  text-[#555353b1]"><a href="#">Packages</a></li>
+                    <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]"><a href="#">Sign in</a></li>
+
+                </ul>
+                <button
+                    class="bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white]">Sign
+                    up</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar  end-->
+
+
+
+    <!-- Hero -->
+    <section class="hero flex justify-center items-center flex-col"
+        style="background-image: url(./images/hero-bg.png); object-fit: cover; height: 100vh;">
+        <h1
+            class="text-center text-transparent bg-clip-text text-[80px] font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400">
+            It’s more than
+            just a trip</h1>
+        <div class="btns flex gap-[0]">
+            <button class="border-[1px] border-[#767171] px-[40px] py-[10px]"><span></span>From
+                where?</button>
+            <button class="border-[1px] border-[#736f6f] px-[40px] py-[10px]"><span></span> Where
+                to?</button>
+            <button class="border-[1px] border-[#716d6d] px-[40px] py-[10px]"><span></span> Depart -
+                Return</button>
+            <button class="border-[1px] border-[#5c5858] px-[40px] py-[10px]"><span></span> 1 adult</button>
+            <button
+                class="bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-r-[10px] text-[white]">Search</button>
+        </div>
+    </section>
+    <!-- Hero end-->
+
+
+    <!-- Adventure -->
+    <section class="adventure flex flex-col gap-[30px] items-center justify-center">
+        <div class="flex gap-[10px]">
+            <img src="./images/ad-card-st/card/Card/full card.png" alt="">
+            <img src="./images/ad-card-nd/card/Card/full card.png" alt="">
+            <img src="./images/ad-card-nd/card/Card/full card.png" alt="">
+        </div>
+        <div>
+            <img src="./images/ad-full/card/Card/full card.png" alt="">
+        </div>
+    </section>
+    <!-- Adventure end-->
+
+    <!-- explore -->
+    <div class="flex items-center justify-center flex-col">
+        <img src="./images/explore-row/card/row.png" alt="">
+        <img src="./images/tripma-row.png" alt="">
+    </div>
+    <!-- explore end-->
+
+    <!-- Footer -->
+    <div class="flex items-center justify-center">
+        <img src="./images/tripma-footer.png" alt="">
+    </div>
+    <!-- Footer end-->
+</body>
+
+</html>
