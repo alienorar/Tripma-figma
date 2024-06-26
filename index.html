@@ -21,21 +21,25 @@
     <header class="sticky top-0 z-10 bg-[white]">
         <nav class="flex justify-between px-[40px] py-[20px]">
             <div class="header-left">
-                <img src="./images/header-logo.svg" alt="header-logo">
+              <a href="./index.html"><img src="./images/header-logo.svg" alt="header-logo"></a>  
             </div>
             <div class="header-right flex items-center gap-[20px]">
                 <div class="hidden  md:block sm:hidden lg:block ">
                     <ul class="flex gap-[20px]">
-                        <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af]"><a href="#">Flights</a></li>
-                        <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]"><a href="#">Hotels</a></li>
-                        <li class="text-[18px] hover:text-[#753585]  text-[#555353b1]"><a href="#">Packages</a></li>
-                        <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]"><a href="#">Sign in</a></li>
+                        <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af] border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600 "><a href="#">Flights</a></li>
+                        <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]  border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600"><a href="#">Hotels</a></li>
+                        <li class="text-[18px] hover:text-[#753585]  text-[#555353b1] border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600 "><a href="#">Packages</a></li>
+                        <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]  border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600"><a href="#">Sign in</a></li>
                     
                     </ul>
                 </div>
               
                 <button
-                    class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden">Sign
+                    class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden hover:bg-gradient-to-br transition-all duration-100">Sign
                     up</button>
 
                     <button class="  lg:hidden md:hidden  sm:block text-[18px] text-violet-600 bg-transparent p-1 rounded-full border-[1px] border-violet-700"><span><i class="fa-solid fa-user text-violet-700"></i></span></button>
@@ -58,48 +62,47 @@
         <div class="btns flex gap-[0] flex-wrap">
             <div class="dropdown relative">
                 <button
-                    class="dropbtn border-[1px] border-gray text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
-                <div class="dropdown-content hidden absolute bg-400 z-1">
-                    <a class="text-[#4e1977] block" href="#">Link 1</a>
-                    <a class="text-[#250d3d] block" href="#">Link 2</a>
-                    <a class="text-[#301453] block" href="#">Link 3</a>
+                    class="dropbtn border-[1px] border-gray text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br"> <i class="fa-solid fa-plane-departure"></i> From where?</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1  bg-white border-violet-600 border-[2px]  w-full p-1 ">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BCL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">YTL</a>
                 </div>
             </div>
             <div class="dropdown relative">
                 <button
-                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
-                <div class="dropdown-content hidden absolute bg-400 z-1">
-                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
-                    <a class="text-[#250d3d] block " href="#">Link 2</a>
-                    <a class="text-[#301453] block " href="#">Link 3</a>
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br "> <i class="fa-solid fa-plane-arrival"></i>  Where to? </button>
+                <div class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+            
                 </div>
             </div>
-            <div class="dropdown relative">
-                <button
-                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
-                <div class="dropdown-content hidden absolute bg-400 z-1">
-                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
-                    <a class="text-[#250d3d] block " href="#">Link 2</a>
-                    <a class="text-[#301453] block " href="#">Link 3</a>
-                </div>
+            <div class="">
+                <input type="datetime-local"
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[9px] outline-none "></input>
             </div>
+    <div class="dropdown relative">
+        <button
+            class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br ">
+            <i class="fa-solid fa-user"></i> 1 adult </button>
+        <div class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+<a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+<a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+<a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+<a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+        </div>
+    </div>
             <div class="dropdown relative">
-                <button
-                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
-                <div class="dropdown-content hidden absolute bg-400 z-1">
-                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
-                    <a class="text-[#250d3d] block " href="#">Link 2</a>
-                    <a class="text-[#301453] block " href="#">Link 3</a>
-                </div>
-            </div>
-            <div class="dropdown relative">
-                <button
-                    class="dropbtn border-[1px] border-gray text-[white] px-[10px] py-[10px] rounded-[6px] bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400  ">Dropdown</button>
-                <div class="dropdown-content hidden absolute bg-400 z-1">
-                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
-                    <a class="text-[#250d3d] block " href="#">Link 2</a>
-                    <a class="text-[#301453] block " href="#">Link 3</a>
-                </div>
+                <input type="search"
+                    class=" border-[1px] border-gray text-[white] px-[10px] py-[10px] rounded-[6px] bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 outline-none placeholder-shown:border-white placeholder-white hover:bg-gradient-to-br" placeholder="Search...">
             </div>
     </section>
     <!-- Hero end-->
@@ -215,7 +218,7 @@
 </div>
         </div>
         <button
-            class=" lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden">Explore more stays</button>
+            class=" lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden hover:bg-gradient-to-br">Explore more stays</button>
      </section>
     <!-- Stay -->
 
@@ -280,9 +283,9 @@
 
     <!-- Footer -->
      <section class="comments custom-container flex flex-col gap-[30px] mt-5 py-6">
-<div class="w-full grid grid-cols-2">
-    <div class="w-full">
-    <img class="w-[200px]" src="./images/header-logo.svg" alt="header-logo">
+<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    <div class="">
+    <img class="w-[100px]" src="./images/header-logo.svg" alt="header-logo">
     </div>
 <ul class="flex flex-col gap-2">
     <li class="text-[20px] text-violet-600"><a href="#">About</a></li>
@@ -320,6 +323,8 @@
     <li class="text-[18px] to-gray-500"><a href="#">Careers</a></li>
 
 </ul>
+<img  class="w-[120px] hover:translate-x-2"  src="./images/f-btn-nd/column/link/link/google play.svg" alt="f-btn-nd">
+<img  class="w-[120px] hover:translate-x-2" src="./images/footer-btn-st/column/link/app store.svg" alt="footer-btn-st">
 </div>
 
 </div>
