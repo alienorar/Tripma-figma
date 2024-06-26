@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <style>
+        .custom-container{
+            width: 87%;
+            margin: 0 auto;
+        }
+    </style>
     <!-- Navbar -->
     <header class="sticky top-0 z-10 bg-[white]">
         <nav class="flex justify-between px-[40px] py-[20px]">
@@ -17,16 +24,22 @@
                 <img src="./images/header-logo.svg" alt="header-logo">
             </div>
             <div class="header-right flex items-center gap-[20px]">
-                <ul class="flex gap-[20px]">
-                    <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af]"><a href="#">Flights</a></li>
-                    <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]"><a href="#">Hotels</a></li>
-                    <li class="text-[18px] hover:text-[#753585]  text-[#555353b1]"><a href="#">Packages</a></li>
-                    <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]"><a href="#">Sign in</a></li>
-
-                </ul>
+                <div class="hidden  md:block sm:hidden lg:block ">
+                    <ul class="flex gap-[20px]">
+                        <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af]"><a href="#">Flights</a></li>
+                        <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]"><a href="#">Hotels</a></li>
+                        <li class="text-[18px] hover:text-[#753585]  text-[#555353b1]"><a href="#">Packages</a></li>
+                        <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]"><a href="#">Sign in</a></li>
+                    
+                    </ul>
+                </div>
+              
                 <button
-                    class="bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white]">Sign
+                    class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden">Sign
                     up</button>
+
+                    <button class="  lg:hidden md:hidden  sm:block text-[18px] text-violet-600 bg-transparent p-1 rounded-full border-[1px] border-violet-700"><span><i class="fa-solid fa-user text-violet-700"></i></span></button>
+                    <button class="  lg:hidden md:hidden sm:block text-[18px] text-violet-600 bg-transparent p-1 rounded-full border-[1px] border-violet-700"><span><i class="fa-solid fa-bars text-violet-700"></i></span></button>
             </div>
         </nav>
     </header>
@@ -35,51 +48,283 @@
 
 
     <!-- Hero -->
-    <section class="hero flex justify-center items-center flex-col"
+    <section class="hero flex justify-center items-center flex-col custom-container"
         style="background-image: url(./images/hero-bg.png); object-fit: cover; height: 100vh;">
         <h1
-            class="text-center text-transparent bg-clip-text text-[80px] font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400">
+            class="text-center text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 text-[30px] md:text-[60px] sm:text-[40px] lg:text-[80px] ">
             It’s more than
-            just a trip</h1>
-        <div class="btns flex gap-[0]">
-            <button class="border-[1px] border-[#767171] px-[40px] py-[10px]"><span></span>From
-                where?</button>
-            <button class="border-[1px] border-[#736f6f] px-[40px] py-[10px]"><span></span> Where
-                to?</button>
-            <button class="border-[1px] border-[#716d6d] px-[40px] py-[10px]"><span></span> Depart -
-                Return</button>
-            <button class="border-[1px] border-[#5c5858] px-[40px] py-[10px]"><span></span> 1 adult</button>
-            <button
-                class="bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-r-[10px] text-[white]">Search</button>
-        </div>
+            </h1>
+            <h1  class="text-center text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 text-[30px] md:text-[60px] sm:text-[40px] lg:text-[80px]">just a trip</h1>
+        <div class="btns flex gap-[0] flex-wrap">
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1">
+                    <a class="text-[#4e1977] block" href="#">Link 1</a>
+                    <a class="text-[#250d3d] block" href="#">Link 2</a>
+                    <a class="text-[#301453] block" href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1">
+                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
+                    <a class="text-[#250d3d] block " href="#">Link 2</a>
+                    <a class="text-[#301453] block " href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1">
+                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
+                    <a class="text-[#250d3d] block " href="#">Link 2</a>
+                    <a class="text-[#301453] block " href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] ">Dropdown</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1">
+                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
+                    <a class="text-[#250d3d] block " href="#">Link 2</a>
+                    <a class="text-[#301453] block " href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray text-[white] px-[10px] py-[10px] rounded-[6px] bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400  ">Dropdown</button>
+                <div class="dropdown-content hidden absolute bg-400 z-1">
+                    <a class="text-[#4e1977] block  " href="#">Link 1</a>
+                    <a class="text-[#250d3d] block " href="#">Link 2</a>
+                    <a class="text-[#301453] block " href="#">Link 3</a>
+                </div>
+            </div>
     </section>
     <!-- Hero end-->
 
-
-    <!-- Adventure -->
-    <section class="adventure flex flex-col gap-[30px] items-center justify-center">
-        <div class="flex gap-[10px]">
-            <img src="./images/ad-card-st/card/Card/full card.png" alt="">
-            <img src="./images/ad-card-nd/card/Card/full card.png" alt="">
-            <img src="./images/ad-card-nd/card/Card/full card.png" alt="">
-        </div>
-        <div>
-            <img src="./images/ad-full/card/Card/full card.png" alt="">
-        </div>
-    </section>
-    <!-- Adventure end-->
-
-    <!-- explore -->
-    <div class="flex items-center justify-center flex-col">
-        <img src="./images/explore-row/card/row.png" alt="">
-        <img src="./images/tripma-row.png" alt="">
+    <!-- Detals -->
+<section class="detals custom-container flex flex-col gap-[30px]">
+    <div class="flex w-full flex-wrap justify-between py-5">
+        <p class="text-[22px] text-gray-500">Find your next adventure with these <span class="text-violet-800">flight detals</span></p>
+        <a href="#" class=" text-violet-800 text-[20px]">All <span><i class="fa-solid fa-arrow-right "></i></span></a>
     </div>
-    <!-- explore end-->
+    <div class="cards grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+    <div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col ">
+<div class="w-full">
+    <img class="w-full" src="./images/detals-st/card/Card/image.svg" alt="detals-st">
+</div>
+<div class="p-5">
+    <div class="flex justify-between">
+        <h2 class="text-[20px]">The Bund, <span class="text-violet-700">Shanghai</span></h2>
+        <p class="text-[20px] text-gray-600">$598</p>
+    </div>
+    <p class="text-[20px] text-gray-600">China’s most international city</p>
+</div>
+    </div>
+   
+    <div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+<div class="w-full">
+    <img class="w-full" src="./images/detals-nd/card/Card/image.svg" alt="detals-st">
+</div>
+<div class="p-5">
+    <div class="flex justify-between">
+        <h2 class="text-[20px]">The Bund, <span class="text-violet-700">Shanghai</span></h2>
+        <p class="text-[20px] text-gray-600">$598</p>
+    </div>
+    <p class="text-[20px] text-gray-600">China’s most international city</p>
+</div>
+    </div>
+   
+    <div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+<div class="w-full">
+    <img class="w-full" src="./images/detals-rd/card/Card/image.svg" alt="detals-st">
+</div>
+<div class="p-5">
+    <div class="flex justify-between">
+        <h2 class="text-[20px]">The Bund, <span class="text-violet-700">Shanghai</span></h2>
+        <p class="text-[20px] text-gray-600">$598</p>
+    </div>
+    <p class="text-[20px] text-gray-600">China’s most international city</p>
+</div>
+    </div>
+   
+
+    </div>
+    <div class="w-full  shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+         <div class="w-full">
+            <img class="w-full" src="./images/kenya-bg/card/Card/image.svg" alt="">
+         </div>
+        <div class="p-5 flex flex-col flex-wrap">
+            <div class="flex justify-between">
+                <h2 class="text-[20px]">Tsavo East National Park,  <span class="text-violet-700">Kenya</span></h2>
+                <p class="text-[20px] text-gray-600">$598</p>
+            </div>
+            <p class="text-[10px] md:text-[16px] lg:text-[20px] text-gray-600">Named after the Tsavo River, and opened in April 1984, Tsavo East National Park is one of the oldest parks in Kenya. It
+            is located in the semi-arid Taru Desert.</p>
+        </div>
+    </div>
+</section>
+    <!-- Detals -->
+
+
+    <!-- Stay -->
+     <section  class="detals custom-container flex flex-col gap-[30px] justify-center items-center">
+        <div class="flex w-full flex-wrap justify-between py-5">
+            <p class="text-[22px] text-gray-500">Explore unique  <span class="text-violet-800">places to stay</span></p>
+            <a href="#" class=" text-violet-800 text-[20px]">All <span><i class="fa-solid fa-arrow-right "></i></span></a>
+        </div>
+        <div  class="cards grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+    <div class="w-full">
+        <img class="w-full" src="./images/stay-st/card/Card/image.svg" alt="detals-st">
+    </div>
+    <div class="p-5">
+        <div class="flex flex-col">
+            <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+            <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money Isles' due to the abundance of cowry shells, a currency of
+            the early ages.</p>
+        </div>
+    </div>
+</div>
+<div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+    <div class="w-full">
+        <img class="w-full" src="./images/stay-nd/card/Card/image.svg" alt="detals-st">
+    </div>
+    <div class="p-5">
+        <div class="flex flex-col">
+            <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+            <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money Isles' due to the abundance of cowry shells, a currency of
+            the early ages.</p>
+        </div>
+    </div>
+</div>
+<div class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col">
+    <div class="w-full">
+        <img class="w-full" src="./images/stay-rd/card/Card/image.svg" alt="detals-st">
+    </div>
+    <div class="p-5">
+        <div class="flex flex-col">
+            <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+            <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money Isles' due to the abundance of cowry shells, a currency of
+            the early ages.</p>
+        </div>
+    </div>
+</div>
+        </div>
+        <button
+            class=" lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden">Explore more stays</button>
+     </section>
+    <!-- Stay -->
+
+    <!-- Comments -->
+     <section class="comments custom-container flex flex-col gap-[30px] mt-5 py-6">
+        <div class="w-full flex justify-center items-center">
+            <h1 class="text-[22px] text-gray-600">What Tripma users are  <span class="text-violet-700">saying</span></h1>
+        </div>
+
+        <div class="cards grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<div class="w-full flex gap-2">
+<div class="w-full">
+    <img class="w-full hover:translate-y-5 transition-all duration-100" src="./images/cmnts-avatar.svg" alt="cmnts-avatar">
+</div>
+<div>
+    <h2>Yifei Chen</h2>
+    <h3>Seoul, South Korea | April 2019</h3>
+    <span><i class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+        class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+            class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                    class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i></span>
+    <p class="text-gray-500 text-[18px]">What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any
+    issues. When I had to cancel a flight because of an emergency, Tripma support helped me <a class="text-violet-600" href="#">read more...</a></p>
+</div>
+</div>
+<div class="w-full flex gap-2">
+<div class="w-full">
+    <img class="w-full hover:translate-y-5 transition-all duration-100" src="./images/cmnts-avatar-nd.svg" alt="cmnts-avatar">
+</div>
+<div>
+    <h2>Yifei Chen</h2>
+    <h3>Seoul, South Korea | April 2019</h3>
+    <span><i class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+        class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+            class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                    class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i></span>
+    <p class="text-gray-500 text-[18px]">What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any
+    issues. When I had to cancel a flight because of an emergency, Tripma support helped me <a class="text-violet-600" href="#">read more...</a></p>
+</div>
+</div>
+<div class="w-full flex gap-2">
+<div class="w-full">
+    <img class="w-full hover:translate-y-5 transition-all duration-100" src="./images/cmnts-avatar-rd.svg" alt="cmnts-avatar">
+</div>
+<div>
+    <h2>Yifei Chen</h2>
+    <h3>Seoul, South Korea | April 2019</h3>
+    <span><i class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+        class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+            class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i><i
+                    class="fa-solid fa-star text-gray-400 hover:text-transparent bg-clip-text font-bold hover:bg-gradient-to-r from-yellow-300 via-violet-500 bg-yellow-300 "></i></span>
+    <p class="text-gray-500 text-[18px]">What a great experience using Tripma! I booked all of my flights for my gap year through Tripma and never had any
+    issues. When I had to cancel a flight because of an emergency, Tripma support helped me <a class="text-violet-600" href="#">read more...</a></p>
+</div>
+</div>
+        </div>
+     </section>
+    <!-- Comments end-->
 
     <!-- Footer -->
-    <div class="flex items-center justify-center">
-        <img src="./images/tripma-footer.png" alt="">
+     <section class="comments custom-container flex flex-col gap-[30px] mt-5 py-6">
+<div class="w-full grid grid-cols-2">
+    <div class="w-full">
+    <img class="w-[200px]" src="./images/header-logo.svg" alt="header-logo">
     </div>
+<ul class="flex flex-col gap-2">
+    <li class="text-[20px] text-violet-600"><a href="#">About</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">About Tripma</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">How it works</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Careers</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Press</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Blog</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Forum</a></li>
+</ul>
+<ul class="flex flex-col gap-2">
+    <li class="text-[20px] text-violet-600"><a href="#">Partner with us</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Partnership programs</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Affiliate program</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Connectivity partners</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Promotions and events</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Integrations</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Community</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Loyalty program</a></li>
+</ul>
+<ul class="flex flex-col gap-2">
+    <li class="text-[20px] text-violet-600"><a href="#">Support</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Help Center</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Contact us</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Privacy policy</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Trust and safety</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Terms of service</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Accessibility</a></li>
+</ul>
+<div class="flex flex-col gap-2">
+<ul >
+    <li class="text-[20px] text-violet-600"><a href="#">About</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">About Tripma</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">How it works</a></li>
+    <li class="text-[18px] to-gray-500"><a href="#">Careers</a></li>
+
+</ul>
+</div>
+
+</div>
+
+     </section>
     <!-- Footer end-->
 </body>
 
