@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .custom-container {
+            width: 87%;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <header style="z-index: 999;" class="sticky top-0 z-50 bg-[white] shadow-gray-400 shadow-sm ">
+        <nav class="flex justify-between px-[40px] py-[20px]">
+            <div class="header-left">
+                <a href="./index.html"><img src="../images/header-logo.svg" alt="header-logo"></a>
+            </div>
+            <div class="header-right flex items-center gap-[20px]">
+                <div class="hidden  md:block sm:hidden lg:block ">
+                    <ul class="flex gap-[20px]">
+                        <li class="text-[18px] hover:text-[#a55be0]  text-[#7d7979af] border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600 "><a href="./flights.html">Flights</a></li>
+                        <li class="text-[18px] hover:text-[#7b3f9b]  text-[#7e7c7cb4]  border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600"><a href="#">Hotels</a></li>
+                        <li class="text-[18px] hover:text-[#753585]  text-[#555353b1] border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600 "><a href="#">Packages</a></li>
+                        <li class="text-[18px] hover:text-[#76398d]  text-[#6d6969a5]  border-b-transparent border-b-[2px] p-1
+                        hover:border-b-violet-600"><a href="#">Sign in</a></li>
+
+                    </ul>
+                </div>
+
+                <button
+                    class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden hover:bg-gradient-to-br transition-all duration-100">Sign
+                    up</button>
+
+                <button
+                    class="  lg:hidden md:hidden  sm:block text-[18px] text-violet-600 bg-transparent p-1 rounded-full border-[1px] border-violet-700"><span><i
+                            class="fa-solid fa-user text-violet-700"></i></span></button>
+                <button
+                    class="  lg:hidden md:hidden sm:block text-[18px] text-violet-600 bg-transparent p-1 rounded-full border-[1px] border-violet-700"><span><i
+                            class="fa-solid fa-bars text-violet-700"></i></span></button>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar  end-->
+
+    <!-- Hero -->
+    <section class="flex flex-col py-[100px] custom-container gap-5">
+        <div class="btns flex gap-[0] flex-wrap">
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br">
+                    <i class="fa-solid fa-plane-departure"></i> From where?</button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1  bg-white border-violet-600 border-[2px]  w-full p-1 ">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BCL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">YTL</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br ">
+                    <i class="fa-solid fa-plane-arrival"></i> Where to? </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="">
+                <input type="datetime-local"
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[9px] outline-none "></input>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br ">
+                    <i class="fa-solid fa-user"></i> 1 adult </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <input type="search"
+                    class=" border-[1px] border-gray text-[white] px-[10px] py-[10px] rounded-[6px] bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 outline-none placeholder-shown:border-white placeholder-white hover:bg-gradient-to-br"
+                    placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="hero-btns flex gap-1 md:gap-3 lg:gap-4 flex-wrap">
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg">
+                    Max price </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg ">
+                    Shops </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg">
+                    Times </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg ">
+                    Airlines </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg ">
+                    Seat class </button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button
+                    class="dropbtn border-[1px] border-gray  text-transparent bg-clip-text font-bold bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] hover:bg-gradient-to-br rounded-lg ">
+                    More</button>
+                <div
+                    class="dropdown-content hidden absolute bg-400 z-1 bg-white border-violet-600 border-[2px]  w-full p-1">
+                    <a class="text-[#4e1977] block hover:bg-violet-700" href="#">SFO</a>
+                    <a class="text-[#250d3d] block hover:bg-violet-700" href="#">ATL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">STL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">BTL</a>
+                    <a class="text-[#301453] block hover:bg-violet-700" href="#">NmL</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- Table -->
+    <section class="grid py-[100px] custom-container gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        <div class="departing flex gap-4 flex-col items-end">
+            <div>
+                <h2 class="text-[20px] p-5">The Bund, <span class="text-violet-700">Shanghai</span></h2>
+            </div>
+            <div class="border-[2px] rounded-lg w-full">
+                <div class="flex border-b-2 p-4 gap-3 flex-wrap">
+                    <div class="">
+                        <img class="w-[80px]" src="../images/dep-avatar-st/table/flight list/image 25.svg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-[20px] sm:text-[18px]">16h 45m</h2>
+                            <h2 class="text-[20px] sm:text-[18px]"></h2>
+                            <h2 class="text-[20px] sm:text-[18px]">7:00AM - 4:15PM</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">1 stop</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">$624</h2>
+                        </div>
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">Hawaiian Airlines</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">2h 45m in HNL</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex border-b-2 p-4 gap-3 flex-wrap">
+                    <div class="">
+                        <img class="w-[80px]" src="../images/dep-avatar-st/table/flight list/image 25.svg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-[20px] sm:text-[18px]">16h 45m</h2>
+                            <h2 class="text-[20px] sm:text-[18px]"></h2>
+                            <h2 class="text-[20px] sm:text-[18px]">7:00AM - 4:15PM</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">1 stop</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">$624</h2>
+                        </div>
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">Hawaiian Airlines</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">2h 45m in HNL</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex border-b-2 p-4 gap-3 flex-wrap">
+                    <div class="">
+                        <img class="w-[80px]" src="../images/dep-avatar-st/table/flight list/image 25.svg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-[20px] sm:text-[18px]">16h 45m</h2>
+                            <h2 class="text-[20px] sm:text-[18px]"></h2>
+                            <h2 class="text-[20px] sm:text-[18px]">7:00AM - 4:15PM</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">1 stop</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">$624</h2>
+                        </div>
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">Hawaiian Airlines</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">2h 45m in HNL</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex border-b-2 p-4 gap-3 flex-wrap">
+                    <div class="">
+                        <img class="w-[80px]" src="../images/dep-avatar-st/table/flight list/image 25.svg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-[20px] sm:text-[18px]">16h 45m</h2>
+                            <h2 class="text-[20px] sm:text-[18px]"></h2>
+                            <h2 class="text-[20px] sm:text-[18px]">7:00AM - 4:15PM</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">1 stop</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">$624</h2>
+                        </div>
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">Hawaiian Airlines</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">2h 45m in HNL</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex border-b-2 p-4 gap-3 flex-wrap">
+                    <div class="">
+                        <img class="w-[80px]" src="../images/dep-avatar-st/table/flight list/image 25.svg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-[20px] sm:text-[18px]">16h 45m</h2>
+                            <h2 class="text-[20px] sm:text-[18px]"></h2>
+                            <h2 class="text-[20px] sm:text-[18px]">7:00AM - 4:15PM</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">1 stop</h2>
+                            <h2 class="text-[20px] sm:text-[18px]">$624</h2>
+                        </div>
+                        <div class="flex gap-1 justify-between flex-wrap md:gap-2 lg:gap-4">
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">Hawaiian Airlines</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">2h 45m in HNL</h2>
+                            <h2 class="text-gray-400 text-[20px] sm:text-[16px]">round trip</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <button onclick={SHowName()}
+                class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden hover:bg-gradient-to-br transition-all duration-100 w-[130px]">Sign
+                up</button>
+                <div class="w-full overflow-hidden rounded-lg">
+                    <img class="w-full " src="../images/map.svg" alt="map">
+                </div>
+        </div>
+        <div class="tables flex gap-4 flex-col">
+<table class="w-full rounded-lg">
+    <tr class=" rounded-lg">
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4"> </th>
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">2/12 </th>
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">2/13</th>
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">2/14</th>
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">2/15</th>
+        <th class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">2/16</th>
+    </tr>
+    <tr class=" rounded-lg">
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">3/7 </td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$837</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$546</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$368</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$675</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$536</td>
+    </tr>
+    <tr>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">3/7 </td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$837</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$546</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$368</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$675</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$536</td>
+    </tr>
+    <tr>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">3/7 </td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$837</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$546</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$368</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$675</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$536</td>
+    </tr>
+    <tr>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">3/7 </td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$837</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$546</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$368</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$675</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$536</td>
+    </tr>
+    <tr>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">3/7 </td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$837</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$546</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$368</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$675</td>
+        <td class="text-center border-gray-500 border-[1px] text-gray-500 sm:p-2 md:p-3 lg:p-4">$536</td>
+    </tr>
+
+</table>
+
+<div style="background-image: url(../images/diagram.svg); background-repeat: no-repeat; background-size:100%; " class="border-[1px] rounded-lg">
+<div class="border-b-[1px] p-4 z-10  border-gray-400">
+    <h2 class="text-gray-400">$2000</h2>
+</div>
+<div class="border-b-[1px] p-4 z-10  border-gray-400">
+    <h2 class="text-gray-400">$2000</h2>
+</div>
+<div class="border-b-[1px] p-4 z-10 border-gray-400">
+    <h2 class="text-gray-400">$2000</h2>
+</div>
+<div class="border-b-[1px] p-4 z-10 border-gray-400">
+    <h2 class="text-gray-400">$2000</h2>
+</div>
+<div class=" p-4 z-10">
+    <h2 class="text-gray-400">$2000</h2>
+</div>
+</div>
+<div class="py-4 flex flex-col gap-1">
+    <div class="flex justify-between flex-wrap">
+        <h2 class="md:text-[20px] lg:text-[22px]">Price rating</h2>
+    <button  class="hidden lg:block bg-gradient-to-r from-blue-600 via-violet-500 to-indigo-400 px-[20px] py-[10px] rounded-[6px] text-[white] sm:hidden hover:bg-gradient-to-br transition-all duration-100 w-[130px]">
+Buy soon
+    </button></div>
+<p class="text-violet-600 text-[20px] ">We recommend booking soon. The average cost of this flight is $750, but could rise 18% to $885 in two weeks.</p>
+<p class="text-gray-500 text-[18px]">Tripma analyzes thousands of flights, prices, and trends to ensure you get the best deal.</p>
+</div>
+        </div>
+
+ 
+
+    </section>
+    <!-- Table end -->
+
+    <section class="custom-container grid grid-cols-1 gap-5">
+<div class="cards grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-st/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col ">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-nd/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-rd/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cards grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-st/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col ">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-nd/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+    <div
+        class=" shadow-gray-400 shadow-lg rounded-[10px] overflow-hidden flex flex-col hover:scale-110 hover:rounded-[10px] hover:z-0  transition-all duration-1000">
+        <div class="w-full">
+            <img class="w-full" src="../images/stay-rd/card/Card/image.svg" alt="detals-st">
+        </div>
+        <div class="p-5">
+            <div class="flex flex-col">
+                <h2 class="text-[20px]">Stay among the atolls in <span class="text-violet-700">Maldives</span></h2>
+                <p class="text-[20px] text-gray-600">From the 2nd century AD, the islands were known as the 'Money
+                    Isles' due to the abundance of cowry shells, a currency of
+                    the early ages.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+
+<!-- Footer -->
+<section class="comments custom-container flex flex-col gap-[30px] mt-5 py-6">
+    <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div class="">
+            <img class="w-[100px]" src="../images/header-logo.svg" alt="header-logo">
+        </div>
+        <ul class="flex flex-col gap-2">
+            <li class="text-[20px] text-violet-600"><a href="#">About</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">About Tripma</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">How it works</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Careers</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Press</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Blog</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Forum</a></li>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <li class="text-[20px] text-violet-600"><a href="#">Partner with us</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Partnership programs</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Affiliate program</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Connectivity partners</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Promotions and events</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Integrations</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Community</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Loyalty program</a></li>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <li class="text-[20px] text-violet-600"><a href="#">Support</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Help Center</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Contact us</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Privacy policy</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Trust and safety</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Terms of service</a></li>
+            <li class="text-[18px] to-gray-500"><a href="#">Accessibility</a></li>
+        </ul>
+        <div class="flex flex-col gap-2">
+            <ul>
+                <li class="text-[20px] text-violet-600"><a href="#">About</a></li>
+                <li class="text-[18px] to-gray-500"><a href="#">About Tripma</a></li>
+                <li class="text-[18px] to-gray-500"><a href="#">How it works</a></li>
+                <li class="text-[18px] to-gray-500"><a href="#">Careers</a></li>
+
+            </ul>
+            <img class="w-[120px] hover:translate-x-2" src="../images/f-btn-nd/column/link/link/google play.svg"
+                alt="f-btn-nd">
+            <img class="w-[120px] hover:translate-x-2" src="../images/footer-btn-st/column/link/app store.svg"
+                alt="footer-btn-st">
+        </div>
+
+    </div>
+
+</section>
+<!-- Footer end-->
+
+
+
+
+
+
+
+
+
+
+    
+            <script>
+                function SHowName(){
+                    alert("fghj")
+                }
+    
+                let age=prompt("enter your age;");
+                alert("your age:"+ age + "yeo")
+            </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
